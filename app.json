@@ -1,10 +1,11 @@
 {
   "expo": {
-    "name": "react-native-project",
-    "slug": "react-native-project",
+    "name": "Mobifood",
+    "slug": "Mobifood",
+    "sdkVersion":"39.0.0",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logo.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -16,17 +17,15 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true
-    },
+    
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      "package": "com.Shashank_reddy.Mobifood",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCm4WI_YsMBwvSecfRURTrgGoAynwrk5cs"
+        }
+      },
+      "versionCode": 1
     }
   }
 }

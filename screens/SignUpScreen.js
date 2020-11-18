@@ -75,7 +75,7 @@ const SignUpScreen = ({navigation}) => {
 
     return (
       <View style={styles.container}>
-          <StatusBar backgroundColor='#0000e4' barStyle="light-content"/>
+          <StatusBar backgroundColor='#F44336' barStyle="light-content"/>
         <View style={styles.header}>
             <Text style={styles.text_header}>Register Now !</Text>
         </View>
@@ -111,7 +111,7 @@ const SignUpScreen = ({navigation}) => {
                 >
                     <Feather 
                         name="check-circle"
-                        color="#0000e4"
+                        color="green"
                         size={20}
                     />
                 </Animatable.View>
@@ -209,7 +209,7 @@ const SignUpScreen = ({navigation}) => {
                     onPress={() => {}}
                 >
                 <LinearGradient
-                    colors={['#1e94fa', '#0000e4']}
+                    colors={['#ed6a67','#D32F2F']}
                     style={styles.signIn}
                 >
                     <Text style={[styles.textSign, {
@@ -221,13 +221,13 @@ const SignUpScreen = ({navigation}) => {
                 <TouchableOpacity
                     onPress={() => navigation.goBack()}
                     style={[styles.signIn, {
-                        borderColor: '#0000e4',
+                        borderColor: '#F44336',
                         borderWidth: 1,
                         marginTop: 15
                     }]}
                 >
                     <Text style={[styles.textSign, {
-                        color: '#0000e4'
+                        color: '#F44336'
                     }]}>Sign In</Text>
                 </TouchableOpacity>
             </View>
@@ -242,7 +242,7 @@ export default SignUpScreen;
 const styles = StyleSheet.create({
     container: {
       flex: 1, 
-      backgroundColor: '#0000e4'
+      backgroundColor: '#F44336'
     },
     header: {
         flex: 1,

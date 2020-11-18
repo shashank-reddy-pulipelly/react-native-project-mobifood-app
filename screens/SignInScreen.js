@@ -114,9 +114,9 @@ const loginHandler=(userName,password)=>{
 
     return (
       <View style={styles.container}>
-          <StatusBar backgroundColor='#0000e4' barStyle="light-content"/>
+          <StatusBar backgroundColor='#F44336' barStyle="light-content"/>
         <View style={styles.header}>
-            <Text style={styles.text_header}>Welcome to Sevina !</Text>
+            <Text style={styles.text_header}>Welcome to Mobifood !</Text>
         </View>
         <Animatable.View 
             animation="fadeInUpBig"
@@ -149,7 +149,7 @@ const loginHandler=(userName,password)=>{
                 >
                     <Feather 
                         name="check-circle"
-                        color="#0000e4"
+                        color="green"
                         size={20}
                     />
                 </Animatable.View>
@@ -208,7 +208,7 @@ const loginHandler=(userName,password)=>{
             
 
             <TouchableOpacity>
-                <Text style={{color: '#0000e4', marginTop:15}}>Forgot password?</Text>
+                <Text style={{color: '#FF6347', marginTop:15}}>Forgot password?</Text>
             </TouchableOpacity>
             <View style={styles.button}>
                 <TouchableOpacity
@@ -216,7 +216,7 @@ const loginHandler=(userName,password)=>{
                     onPress={() => {loginHandler(data.username,data.password)}}
                 >
                 <LinearGradient
-                    colors={['#1e94fa', '#0000e4']}
+                    colors={['#ed6a67','#D32F2F']}
                     style={styles.signIn}
                 >
                     <Text style={[styles.textSign, {
@@ -228,13 +228,13 @@ const loginHandler=(userName,password)=>{
                 <TouchableOpacity
                     onPress={() => navigation.navigate('SignUpScreen')}
                     style={[styles.signIn, {
-                        borderColor: '#0000e4',
+                        borderColor: '#F44336',
                         borderWidth: 1,
                         marginTop: 15
                     }]}
                 >
                     <Text style={[styles.textSign, {
-                        color: '#0000e4'
+                        color: '#F44336'
                     }]}>Sign Up</Text>
                 </TouchableOpacity>
             </View>
@@ -248,7 +248,7 @@ export default SignInScreen;
 const styles = StyleSheet.create({
     container: {
       flex: 1, 
-      backgroundColor: '#0000e4'
+      backgroundColor: '#F44336'
     },
     header: {
         flex: 1,

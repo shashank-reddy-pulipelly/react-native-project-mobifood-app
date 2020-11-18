@@ -37,9 +37,7 @@ export function DrawerContent(props) {
                     <View style={styles.userInfoSection}>
                         <View style={{flexDirection:'row',marginTop: 15,alignItems:'center'}}>
                             <Avatar.Image 
-                                source={{
-                                    uri: 'https://raw.githubusercontent.com/shashank-reddy-pulipelly/react-final-project-with-bootstrap-reactstrap/gh-pages/assets/images/shashank.jpg'
-                                }}
+                                     source={require('../assets/banners/shashank.jpg')}
                                 size={50}
                             />
                             <View style={{marginLeft:15, flexDirection:'column'}}>
@@ -86,12 +84,12 @@ export function DrawerContent(props) {
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
-                                name="bookmark-outline" 
+                                name="cart" 
                                 color={color}
                                 size={size}
                                 />
                             )}
-                            label="Bookmarks"
+                            label="My Cart"
                             onPress={() => {props.navigation.navigate('BookmarkScreen')}}
                         />
                         <DrawerItem 

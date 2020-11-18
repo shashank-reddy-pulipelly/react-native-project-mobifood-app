@@ -1,23 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
+
 import React,{useEffect} from 'react';
 import 'react-native-gesture-handler';
 import {   NavigationContainer, 
   DefaultTheme as NavigationDefaultTheme,
   DarkTheme as NavigationDarkTheme } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { StyleSheet, Text, View,Button,ActivityIndicator } from 'react-native';
+
+import { StyleSheet,  View,Dimensions,StatusBar } from 'react-native';
 import MainTabScreen from './screens/MainTabScreen';
 import SupportScreen from './screens/SupportScreen';
-import SettingsScreen from './screens/SettingsScreen';
+import SettingStackScreen from './screens/SettingsScreen';
 import BookmarkScreen from './screens/BookmarkScreen';
 import RootStackScreen from './screens/RootStackScreen';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import {DrawerContent} from './screens/DrawerContent';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 import { AuthContext } from './components/context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import * as Animatable from 'react-native-animatable';
 const Drawer = createDrawerNavigator();
 import { 
   Provider as PaperProvider, 
@@ -28,7 +27,7 @@ import {
 
 
 
-var type,userToken;
+
 export default function App() {
   //    const [isLoading, setIsLoading] = React.useState(true);
   //  const [userToken, setUserToken] = React.useState(null); 
@@ -152,12 +151,19 @@ export default function App() {
         console.log(e)
       }
       dispatch({type:'RETRIEVE_TOKEN',token:userToken})
-     },1000)
+     },2000)
    },[])
    if(loginState.isLoading) {
     return(
-      <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
-        <ActivityIndicator color="#0000ff" size="large"/>
+      <View style={{flex:1,justifyContent:'center', backgroundColor: '#F44336',alignItems:'center'}}>
+<StatusBar backgroundColor='#F44336' barStyle="light-content"/>
+<Animatable.Image 
+                animation="bounceIn"
+                duraton="1500"
+            source={require('./assets/logo.png')}
+            style={styles.logo}
+            resizeMode="stretch"
+            />
      
       </View>
     );
@@ -177,7 +183,7 @@ export default function App() {
          
            <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
           <Drawer.Screen name="SupportScreen" component={SupportScreen} />
-          <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
+          <Drawer.Screen name="SettingsScreen" component={SettingStackScreen} />
           <Drawer.Screen name="BookmarkScreen" component={BookmarkScreen} />
       </Drawer.Navigator>):<RootStackScreen />}
  
@@ -188,6 +194,8 @@ export default function App() {
   );
 }
 
+const {height} = Dimensions.get("screen");
+const height_logo = height * 0.28;
 
 const styles = StyleSheet.create({
   container: {
@@ -195,5 +203,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
    
   },
-
+  logo: {
+    width: height_logo,
+    height: height_logo
+},
 });
