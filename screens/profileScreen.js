@@ -48,7 +48,7 @@ const ProfileScreen = ({navigation}) => {
         </View>
         <View style={styles.row}>
           <Icon name="phone" color="#777777" size={20}/>
-          <Text style={{color:"#777777", marginLeft: 20}}>+91-9533156114</Text>
+          <Text style={{color:"#777777", marginLeft: 20}}>+91 6303365901</Text>
         </View>
         <View style={styles.row}>
           <Icon name="email" color="#777777" size={20}/>
