@@ -18,7 +18,7 @@ const BookmarkStack = createStackNavigator();
 
 import {useTheme} from 'react-native-paper';
 
-const BookmarkScreen = (props) => {
+const BookmarkScreen = () => {
   const { colors } = useTheme();
   
     return (
@@ -48,7 +48,7 @@ const BookmarkScreen = (props) => {
                <Text  style={{margin: 10,marginLeft:120,fontSize:15,color:'#666666'}}> Add items to it now</Text>
               
                
-                          <TouchableOpacity style={styles.commandButton} onPress={() => props.navigation.navigate('Home')}>
+                          <TouchableOpacity style={styles.commandButton} onPress={() =>{}}>
           <Text style={styles.panelButtonTitle}>Order Now</Text>
         </TouchableOpacity>
                </View>
@@ -77,7 +77,7 @@ const BookmarkStackScreen = (props) => (
     }}>
     <BookmarkStack.Screen
       name="My cart"
-      component={props=> <BookmarkScreen {...props} /> }
+      component={BookmarkScreen}
       
       options={{
         headerLeft: () => (

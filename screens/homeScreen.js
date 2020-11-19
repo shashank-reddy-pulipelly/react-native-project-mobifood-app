@@ -21,8 +21,8 @@ const HomeScreen = ({navigation}) => {
   const theme = useTheme();
 
   return (
-    <SafeAreaView style={styles.container}>
-    <ScrollView >
+  
+    <ScrollView style={styles.container}>
       <StatusBar translucent={true} backgroundColor={'transparent'} />
       <View style={styles.sliderContainer}>
         <Swiper
@@ -220,7 +220,7 @@ const HomeScreen = ({navigation}) => {
         </View>
       </View>
     </ScrollView>
-    </SafeAreaView>
+ 
   );
 };
 

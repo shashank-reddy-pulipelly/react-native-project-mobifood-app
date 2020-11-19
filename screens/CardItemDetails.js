@@ -13,7 +13,7 @@ import HeaderImageScrollView, {
 } from 'react-native-image-header-scroll-view';
 
 import * as Animatable from 'react-native-animatable';
-import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
+
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 const MIN_HEIGHT = Platform.OS === 'ios' ? 90 : 70;
@@ -72,21 +72,8 @@ const CardItemDetails = ({route}) => {
           </View>
         </View>
 
-        <View style={[styles.section, {height: 250}]}>
-          <MapView
-            provider={PROVIDER_GOOGLE}
-            style={{flex: 1}}
-            region={{
-              latitude: itemData.coordinate.latitude,
-              longitude: itemData.coordinate.longitude,
-              latitudeDelta: 0.00864195044303443,
-              longitudeDelta: 0.000142817690068,
-            }}>
-            <MapView.Marker
-              coordinate={itemData.coordinate}
-              image={require('../assets/map_marker.png')}
-            />
-          </MapView>
+        <View style={styles.section}>
+        <Text style={styles.sectionContent}>{itemData.description}</Text>
         </View>
       </HeaderImageScrollView>
     </View>
