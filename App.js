@@ -131,18 +131,18 @@ export default function App() {
       dispatch({type:'LOGOUT'})
      },
      signUp: () => {
-       setUserToken('fgkj');
-       setIsLoading(false);
+       //setUserToken('fgkj');
+       //setIsLoading(false);
     },
     toggleTheme:()=>{
 
       setIsDarkTheme(isDarkTheme=> !isDarkTheme )
     }
-   }))
+   }),[])
 
    useEffect(()=>{
      setTimeout(async()=>{
-      //  setIsLoading(false);
+      
       let userToken=null;
       try{
         userToken = await AsyncStorage.getItem('userToken')
