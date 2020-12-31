@@ -23,7 +23,7 @@ const HotelStack=createStackNavigator();
 import CardListScreen from './CardListScreen';
 import CardItemDetails from './CardItemDetails';
 import HotelListScreen from './HotelScreen';
-import HotelItemDetails from './HotelItemDetails'
+import HotelItemDetails from './HotelItemDetails';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 

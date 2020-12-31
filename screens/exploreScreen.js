@@ -16,10 +16,8 @@ import MapView, {PROVIDER_GOOGLE} from "react-native-maps";
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
-
 import { markers, mapDarkStyle, mapStandardStyle } from '../model/mapData';
 import StarRating from '../components/StarRating';
-
 import { useTheme } from '@react-navigation/native';
 
 const { width, height } = Dimensions.get("window");

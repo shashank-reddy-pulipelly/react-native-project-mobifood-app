@@ -1,12 +1,4 @@
 
-
-
-
-
-
-
-
-
 import React from 'react';
 import { View, Text, Button, StyleSheet,StatusBar,TouchableOpacity, Image  } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
